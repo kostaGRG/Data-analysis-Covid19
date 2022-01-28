@@ -2,7 +2,7 @@ close all
 clear
 clc
 
-%% MEMBERS
+%% TEAM MEMBERS
 % Konstantinos Gerogiannis  AEM:9638
 % Stavros Tsimpoukis        AEM:9963
 
@@ -12,8 +12,8 @@ countries = readtable('EuropeanCountries.xlsx');
 countries = table2array(countries(:,2));
 
 %% CALCULATE WEEKS WITH MAXIMUM POSITIVITY RATE FOR YEARS 2020 AND 2021
-[index_2020,week_2020] = max_positivity_rate(country_data_for_specific_weeks(data,'Ireland',2020,45,50),2020,45);
-[index_2021,week_2021] = max_positivity_rate(country_data_for_specific_weeks(data,'Ireland',2021,45,50),2021,45);
+[index_2020,week_2020] = Group14Exe1Func1(Group14Exe1Func3(data,'Ireland',2020,45,50),2020,45);
+[index_2021,week_2021] = Group14Exe1Func1(Group14Exe1Func3(data,'Ireland',2021,45,50),2021,45);
 
 %% HISTOGRAM OF COUNTRIES' POSITIVITY RATE FOR SPECIFIC WEEK OF 2020
 rows = strcmp(data.year_week,week_2020) & strcmp(data.level,'national');
@@ -29,7 +29,7 @@ if height < 25
     rows = ~ismember(countries,countries_2020.country);
     country_names = countries(rows);
     for i = 1:length(country_names)
-        cell = {string(country_names(i)),fillData(data,country_names(i),2020,index_2020)};
+        cell = {string(country_names(i)),Group14Exe1Func2(data,country_names(i),2020,index_2020)};
         countries_2020 = [countries_2020; cell];
     end
 end
@@ -73,6 +73,7 @@ fprintf('Now, we will try to approach 2021s histogram by 2020s exponential distr
  
 figure(3);
 clf;
+subplot(1,2,1);
 histogram(countries_2020.positivity_rate,5,'Facecolor','b','Normalization','pdf');
 hold on;
 plot(x_2020,y_2020,'-r','LineWidth',2);
@@ -81,8 +82,7 @@ xlabel('Positivity rate');
 legend('2020 histogram','exponential distribution for 2020','exponential distribution for 2021');
 title('Histogram for '+week_2020+' using both exponential distributions');
         
-figure(4);
-clf;
+subplot(1,2,2);
 histogram(countries_2021.positivity_rate,5,'Facecolor','b','Normalization','pdf');
 hold on;
 plot(x_2020,y_2020,'-r','LineWidth',2);
@@ -91,22 +91,8 @@ xlabel('Positivity rate');
 legend('2021 histogram','exponential distribution for 2020','exponential distribution for 2021');
 title('Histogram for '+week_2021+' using both exponential distributions');
 
-%% FUNCTIONS 
-
-function [ind,week] = max_positivity_rate(country_data,year,from_week)
-    positivity_rates = country_data.('positivity_rate');
-    [~,ind] = max(positivity_rates);
-    week =string(year)+ '-W' + string(from_week-1+ind); 
-end
-
-function predicted_positivity_rate  = fillData(data,country_name,year,week)
-    country_data = country_data_for_specific_weeks(data,country_name,year,week-5,week+5);
-    positivity_rates = country_data.positivity_rate;
-    predicted_positivity_rate = mean(positivity_rates);
-end
 
 
-function country_data = country_data_for_specific_weeks(data,country_name,year,from_week,to_week)
-    rows = strcmp(data.country,country_name) & string(data.year_week) >= (string(year)+'-W'+string(from_week)) & string(data.year_week) <= (string(year)+'-W'+string(to_week));
-    country_data = data(rows,:);    
-end
+
+
+
