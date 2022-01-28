@@ -91,8 +91,3 @@ xlabel('Positivity rate');
 legend('2021 histogram','exponential distribution for 2020','exponential distribution for 2021');
 title('Histogram for '+week_2021+' using both exponential distributions');
 
-
-
-
-
-

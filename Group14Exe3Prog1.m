@@ -7,8 +7,8 @@ clc
 
 data = readtable('FullEodyData.xlsx');
 
-% As we calculated in Exercise1, 2021-W46 is the week with the highest
-% Ireland's positivity rate among the last weeks of 2021.
+% As we calculated in Exercise1, 2021-W46 is the week with the
+% Ireland's highest positivity rate among the last weeks of 2021.
 % So we are gonna work with the last 12 weeks, starting from 2021-W35 to 2021-W46.
 final_week = 46;
 total_weeks = 12;
@@ -85,4 +85,3 @@ title('Weekly Greece''s and Europe''s positivity rates');
 xlabel('Week number');
 ylabel('Positivity rate');
 legend('Greece''s positivity rate','Europe''s positivity rate','Greece''s positivity rate 95%% confidence intervals','Location','northwest');
-
