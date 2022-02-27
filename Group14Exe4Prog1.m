@@ -95,9 +95,9 @@ for country= countries
     else
         fprintf('Based on the 95%% confidence interval, it seems that there are\nsignificant differences in positivity rate between 2020 and 2021:\npositivity rate 2021 > positivity rate 2020\n');
     end
-    pause;
-end
     
+end
+ 
 % As we can see from the outputs and the plots, there is no rule that 5
 % countries agree to. Each country has its own behaviour, as there are
 % countries such as Hungary, where it seems that the results from 2020 and
@@ -117,4 +117,3 @@ function predicted_positivity_rate  = fillData(data,country_name,year,week)
     positivity_rates = country_data.positivity_rate;
     predicted_positivity_rate = mean(positivity_rates);
 end
-

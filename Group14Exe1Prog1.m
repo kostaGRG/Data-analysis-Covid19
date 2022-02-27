@@ -7,8 +7,8 @@ clc
 % Stavros Tsimpoukis        AEM:9963
 
 %% READ DATA FROM TABLE
-data = readtable('ECDC-7Days-Testing.xlsx');
-countries = readtable('EuropeanCountries.xlsx');
+data = readtable('ECDC-7Days-Testing.xlsx','PreserveVariableNames', true);
+countries = readtable('EuropeanCountries.xlsx','PreserveVariableNames', true);
 countries = table2array(countries(:,2));
 
 %% CALCULATE WEEKS WITH MAXIMUM POSITIVITY RATE FOR YEARS 2020 AND 2021

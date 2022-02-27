@@ -5,7 +5,7 @@ clear
 close all
 clc
 
-data = readtable('FullEodyData.xlsx');
+data = readtable('FullEodyData.xlsx', 'PreserveVariableNames', true);
 
 % As we calculated in Exercise1, 2021-W46 is the week with the
 % Ireland's highest positivity rate among the last weeks of 2021.
