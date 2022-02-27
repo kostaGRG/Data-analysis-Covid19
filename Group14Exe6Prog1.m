@@ -7,7 +7,7 @@ clc
 
 %% init
 alpha = 0.05; % significance level
-B = 1000; % Bootstrap iterations
+B = 1000; % Bootstrap iterations    
 
 % From the previous exercise we can conclude that the biggest correlation,
 % among Greece and the foreign countries, is between Greece-Lithuania and

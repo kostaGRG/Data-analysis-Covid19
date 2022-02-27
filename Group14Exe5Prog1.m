@@ -85,7 +85,7 @@ end
 
 %% Plotting
 
-% Creatring a scatter diagram to show the correlation for ever pair
+% Creating a scatter diagram to show the correlation for every pair
 
 weeks = first_week:1:last_week;
 
@@ -93,15 +93,19 @@ for i = 1:5
     subplot(2,3,i);
     plot(weeks, positivity_rates_foreign(:,i),'.');
     title('Evolution of Positivity-Rate for: '+countries(i));
+    xlabel('Week number');
+    ylabel('Positivity rate');
 end
 
 subplot(2,3,6)
 plot(weeks, positivity_rates_greek,'.');
 title('Evolution of Positivity-Rate for: Greece');
+xlabel('Week number');
+ylabel('Positivity rate');
 
 %% Correlation
 
-% Conductin significance test for parametric and randomization techniques
+% Conducting significance test for parametric and randomization techniques
 
 % Parametric
 Positivity_Rates = [ positivity_rates_greek positivity_rates_foreign ];
@@ -115,22 +119,24 @@ end
 
 % significance test for a = 0.05 ( significance level )
 fprintf('\n<strong>Significance Test for correlation about weekly positivity rate between Greece and foreign countries, using sigificance level of a =0.05 .</strong>\n');
+alpha = 0.05;
 for i =1:5
-    if p_param(1, i+1) > 0.05
-        fprintf('The p-value for hypothesis testing of no correlation is greater than alpha=0.05. So there is no proof that there is correlation between Greece and '+countries(i)+' weekly positivity rate.\n');
+    if p_param(1, i+1) > alpha
+        fprintf('The p-value for hypothesis testing of no correlation is greater than alpha=%.2f. So there is no proof that there is correlation between Greece and '+countries(i)+' weekly positivity rate.\n',alpha);
     else
-        fprintf('The p-value for hypothesis testing of no correlation is less than alpha=0.05. So there is  proof that there is correlation between Greece and '+countries(i)+' weekly positivity rate.\n');
+        fprintf('The p-value for hypothesis testing of no correlation is less than alpha=%.2f. So there is  proof that there is correlation between Greece and '+countries(i)+' weekly positivity rate.\n',alpha);
     end
     fprintf('The p-value is %.5f\n', p_param(1, i+1));
 end
 
 % significance test for a = 0.01 ( significance level )
+alpha = 0.01;
 fprintf('\n<strong>Significance Test for correlation about weekly positivity rate between Greece and foreign countries, using sigificance level of a =0.01 .</strong>\n');
 for i =1:5
-    if p_param(1, i+1) > 0.01
-        fprintf('The p-value for hypothesis testing of no correlation is greater than alpha=0.01. So there no is proof that there is correlation between Greece and '+countries(i)+' weekly positivity rate.\n');
+    if p_param(1, i+1) > alpha
+        fprintf('The p-value for hypothesis testing of no correlation is greater than alpha=%.2f. So there is no proof that there is correlation between Greece and '+countries(i)+' weekly positivity rate.\n',alpha);
     else
-        fprintf('The p-value for hypothesis testing of no correlation is less than alpha=0.01. So there is  proof that there is correlation between Greece and '+countries(i)+' weekly positivity rate.\n');
+        fprintf('The p-value for hypothesis testing of no correlation is less than alpha=%.2f. So there is  proof that there is correlation between Greece and '+countries(i)+' weekly positivity rate.\n',alpha);
     end
     fprintf('The p-value is %.5f\n', p_param(1, i+1));
 end
