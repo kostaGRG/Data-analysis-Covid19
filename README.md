@@ -107,6 +107,9 @@ The p-value is 0.00000
 
 ![Positivity Rate Comparison](./images/exe4/github5.png)
 
+
+#### Άσκηση 6
+
 #### Στοιχεία φοιτητών:
 1.  Κωνσταντίνος Γερογιάννης  
 email: kostas.gerogiannis04@gmail.com  
