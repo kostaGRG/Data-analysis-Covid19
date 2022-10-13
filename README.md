@@ -105,7 +105,7 @@ The p-value for hypothesis testing of no correlation is less than alpha=0.01. So
 The p-value is 0.00000
 
 
-![Positivity Rate Comparison](./images/exe4/github5.png)
+![Positivity Rate Comparison](./images/github5.png)
 
 
 #### Άσκηση 6
