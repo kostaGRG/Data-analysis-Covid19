@@ -43,10 +43,10 @@
 Τα αποτελέσματα που προκύπτουν είναι τα εξής:
 
 #### Correlation factors between Greece and foreign countries ( Parametric )
-The pearson correlation between Greece and Ireland is rho = 0.65.
-The pearson correlation between Greece and Hungary is rho = 0.68.
-The pearson correlation between Greece and Iceland is rho = 0.50.
-The pearson correlation between Greece and Italy is rho = 0.04.
+The pearson correlation between Greece and Ireland is rho = 0.65.  
+The pearson correlation between Greece and Hungary is rho = 0.68.  
+The pearson correlation between Greece and Iceland is rho = 0.50.  
+The pearson correlation between Greece and Italy is rho = 0.04.  
 The pearson correlation between Greece and Lithuania is rho = 0.87.
 
 #### Significance Test for correlation about weekly positivity rate between Greece and foreign countries, using sigificance level of a =0.05 .
@@ -106,6 +106,7 @@ The p-value for hypothesis testing of no correlation is less than alpha=0.01. So
 The p-value is 0.00000
 
 
+#### Graph of the Positivity Rate for the countries under examination
 ![Positivity Rate Comparison](./images/github5.png)
 
 
