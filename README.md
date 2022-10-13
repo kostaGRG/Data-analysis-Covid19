@@ -109,6 +109,26 @@ The p-value is 0.00000
 
 
 #### Άσκηση 6
+Σε αυτό το ερώτημα επιθυμούμε να ελέγξουμε εάν, για τις δύο χώρες όπου ο δείκτης θετικότητας συσχετίζεται περισσότερο με αυτόν της Ελλάδας, η διαφορά των αντίστοιχων συντελεστών είναι στατιστικά σημαντική.
+Έπειτα από χρήση της τεχνικής bootstrap για να εξάγουμε το rank καταλήγουμε στο κάτωθι συμπέρασμα: 
+
+The rank of the original difference of correlation factors between Greece and the other two countries (Hungary, Lithuania) is included in the acceptance area.
+So we cannot reject the null Hypothesis, at a significance level of a=0.05. In that case we can say that there is no significant difference between the two correlation factors.
+
+
+
+#### Άσκηση 7
+
+
+The most effective models for the two samples
+
+Sample 1: The best model is to take a delay of 0 weeks.
+The R-square statistic to this choice is R^2 = 0.94852
+
+Sample 2: The best model is to take a delay of 1 weeks.
+The R-square statistic to this choice is R^2 = 0.90469
+
+
 
 #### Στοιχεία φοιτητών:
 1.  Κωνσταντίνος Γερογιάννης  
