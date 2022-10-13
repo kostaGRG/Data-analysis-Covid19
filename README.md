@@ -50,27 +50,46 @@ The pearson correlation between Greece and Italy is rho = 0.04.
 The pearson correlation between Greece and Lithuania is rho = 0.87.
 
 #### Significance Test for correlation about weekly positivity rate between Greece and foreign countries, using sigificance level of a =0.05 .
+
 The p-value for hypothesis testing of no correlation is less than alpha=0.05. So there is  proof that there is correlation between Greece and Ireland weekly positivity rate.
+
 The p-value is 0.01655
+
 The p-value for hypothesis testing of no correlation is less than alpha=0.05. So there is  proof that there is correlation between Greece and Hungary weekly positivity rate.
+
 The p-value is 0.01009
+
 The p-value for hypothesis testing of no correlation is greater than alpha=0.05. So there is no proof that there is correlation between Greece and Iceland weekly positivity rate.
+
 The p-value is 0.07963
+
 The p-value for hypothesis testing of no correlation is greater than alpha=0.05. So there is no proof that there is correlation between Greece and Italy weekly positivity rate.
+
 The p-value is 0.88919
+
 The p-value for hypothesis testing of no correlation is less than alpha=0.05. So there is  proof that there is correlation between Greece and Lithuania weekly positivity rate.
+
 The p-value is 0.00011
 
 #### Significance Test for correlation about weekly positivity rate between Greece and foreign countries, using sigificance level of a =0.01 .
 The p-value for hypothesis testing of no correlation is greater than alpha=0.01. So there no is proof that there is correlation between Greece and Ireland weekly positivity rate.
+
 The p-value is 0.01655
+
 The p-value for hypothesis testing of no correlation is greater than alpha=0.01. So there no is proof that there is correlation between Greece and Hungary weekly positivity rate.
+
 The p-value is 0.01009
+
 The p-value for hypothesis testing of no correlation is greater than alpha=0.01. So there no is proof that there is correlation between Greece and Iceland weekly positivity rate.
+
 The p-value is 0.07963
+
 The p-value for hypothesis testing of no correlation is greater than alpha=0.01. So there no is proof that there is correlation between Greece and Italy weekly positivity rate.
+
 The p-value is 0.88919
+
 The p-value for hypothesis testing of no correlation is less than alpha=0.01. So there is  proof that there is correlation between Greece and Lithuania weekly positivity rate.
+
 The p-value is 0.00011
 
 #### Correlation factors between Greece and foreign countries ( Randomization )
@@ -82,26 +101,44 @@ The pearson correlation between Greece and Lithuania is rho = 0.87.
 
 #### Significance Test for correlation about weekly positivity rate between Greece and foreign countries, using sigificance level of a =0.05 .
 The p-value for hypothesis testing of no correlation is less than alpha=0.05. So there is  proof that there is correlation between Greece and Ireland weekly positivity rate.
+
 The p-value is 0.02997
+
 The p-value for hypothesis testing of no correlation is less than alpha=0.05. So there is  proof that there is correlation between Greece and Hungary weekly positivity rate.
+
 The p-value is 0.00599
+
 The p-value for hypothesis testing of no correlation is greater than alpha=0.05. So there is no proof that there is correlation between Greece and Iceland weekly positivity rate.
+
 The p-value is 0.10190
+
 The p-value for hypothesis testing of no correlation is greater than alpha=0.05. So there is no proof that there is correlation between Greece and Italy weekly positivity rate.
+
 The p-value is 0.86713
+
 The p-value for hypothesis testing of no correlation is less than alpha=0.05. So there is  proof that there is correlation between Greece and Lithuania weekly positivity rate.
+
 The p-value is 0.00000
 
 #### Significance Test for correlation about weekly positivity rate between Greece and foreign countries, using sigificance level of a =0.01 .
 The p-value for hypothesis testing of no correlation is greater than alpha=0.01. So there no is proof that there is correlation between Greece and Ireland weekly positivity rate.
+
 The p-value is 0.02997
+
 The p-value for hypothesis testing of no correlation is less than alpha=0.01. So there is  proof that there is correlation between Greece and Hungary weekly positivity rate.
+
 The p-value is 0.00599
+
 The p-value for hypothesis testing of no correlation is greater than alpha=0.01. So there no is proof that there is correlation between Greece and Iceland weekly positivity rate.
+
 The p-value is 0.10190
+
 The p-value for hypothesis testing of no correlation is greater than alpha=0.01. So there no is proof that there is correlation between Greece and Italy weekly positivity rate.
+
 The p-value is 0.86713
+
 The p-value for hypothesis testing of no correlation is less than alpha=0.01. So there is  proof that there is correlation between Greece and Lithuania weekly positivity rate.
+
 The p-value is 0.00000
 
 
@@ -110,6 +147,7 @@ The p-value is 0.00000
 
 #### Άσκηση 6
 Σε αυτό το ερώτημα επιθυμούμε να ελέγξουμε εάν, για τις δύο χώρες όπου ο δείκτης θετικότητας συσχετίζεται περισσότερο με αυτόν της Ελλάδας, η διαφορά των αντίστοιχων συντελεστών είναι στατιστικά σημαντική.
+
 Έπειτα από χρήση της τεχνικής bootstrap για να εξάγουμε το rank καταλήγουμε στο κάτωθι συμπέρασμα: 
 
 The rank of the original difference of correlation factors between Greece and the other two countries (Hungary, Lithuania) is included in the acceptance area.
@@ -136,4 +174,5 @@ email: kostas.gerogiannis04@gmail.com
 github: [kostaGRG](https://github.com/kostaGRG)
 
 2. Σταύρος Τσιμπούκης
+
 email: tsimpous@ece.auth.gr
