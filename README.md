@@ -136,3 +136,4 @@ email: kostas.gerogiannis04@gmail.com
 github: [kostaGRG](https://github.com/kostaGRG)
 
 2. Σταύρος Τσιμπούκης
+\nemail: tsimpous@ece.auth.gr
