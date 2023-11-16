@@ -1,30 +1,30 @@
 ### Data Analysis: Covid-19
-#### Εισαγωγή
-Το παρόν project συσχετίζεται με το πανεπιστημιακό μάθημα Ανάλυση δεδομένων (7ο εξάμηνο) του τμήματος Ηλεκτρολόγων Μηχανικών και Μηχανικών Υπολογιστών του ΑΠΘ. Έχει χρησιμοποιηθεί η γλώσσα Matlab. Ορισμένα αρχεία περιέχουν βοηθητικές συναρτήσεις (αρχεία func), οι οποίες χρησιμοποιούνται στα κύρια αρχεία (αρχεία prog). Όλα τα αρχεία συνοδεύονται από βοηθητικά σχόλια για την επεξήγηση του κώδικα. Τα αρχεία .xlsx περιέχουν στοιχεία για την πανδημία του covid-19 και έχουν ληφθεί από την ιστοσελίδα [https://www.stelios67pi.eu](https://www.stelios67pi.eu).  
-Το αρχείο _ECDC-7Days-Testing.xlsx_ έχει εβδομαδιαία δεδομένα για διάφορες χώρες της ευρωπαϊκής ένωσης σχετικά με την πανδημία, ενώ το αρχείο _FullEodyData.xlsx_ παρέχει αναλυτικότερες πληροφορίες για την πανδημία στην Ελλάδα. Τέλος, το αρχείο _EuropeanCountries.xlsx_ περιλαμβάνει μια λίστα με όλες τις ευρωπαϊκές χώρες για τις οποίες έχουμε δεδομένα.
-Η εργασία αυτή ασχολείται κυρίως με την Ιρλανδία και την Ελλάδα, ωστόσο οι συναρτήσεις που χρησιμοποιούνται μπορούν με μικρές αλλαγές να προσαρμοστούν σε οποιαδήποτε άλλη επιθυμητή χώρα.  
-Τέλος, το αρχείο με το όνομα _Project2021.pdf_ είναι η εκφώνηση της εργασίας όπως μας παραδόθηκε από τον διδάσκοντα του μαθήματος.
+#### Introduction
+This project is associated with the university course Data Analysis (7th semester) of the Department of Electrical and Computer Engineering at the Aristotle University of Thessaloniki (AUTh). The Matlab language has been used. Some files contain auxiliary functions (func files), which are used in the main files (prog files). All files are accompanied by helpful comments for explaining the code. The .xlsx files contain data about the COVID-19 pandemic and have been obtained from the website https://www.stelios67pi.eu.
+The file ECDC-7Days-Testing.xlsx has weekly data for various countries of the European Union regarding the pandemic, while the file FullBodyData.xlsx provides more detailed information about the pandemic in Greece. Finally, the file EuropeanCountries.xlsx includes a list of all the European countries for which we have data.
+This work mainly deals with Ireland and Greece, however, the functions used can be adapted with minor changes to any other desired country.
+Lastly, the file named Project2021.pdf is the assignment description as it was given to us by the course instructor.
 
-#### Άσκηση 1
-Στο ερώτημα αυτό δείχνουμε το δείκτη θετικότητας των χωρών για δύο διαφορετικές εβδομάδες. Τα αποτελέσματα που προκύπτουν φαίνονται στα παρακάτω ιστογράμματα:
+
+#### Exercise 1
+In this question, we show the positivity rate of the countries for two different weeks. The results are presented in the following histograms:
 
 ![2020-W45](./images/exe1/2020w45.png)
 ![2021-W46](./images/exe1/2021w46.png)
 
-Η ακολουθή εικόνα είναι μια σύγκριση μεταξύ των δύο κατανομών που προέκυψαν για την κάθε εβδομάδα, για να απαντήσουμε αν μπορούν να προσεγγιστούν από μία κοινή κατανομή.
+The following image is a comparison between the two distributions that resulted for each week, to answer whether they can be approximated by a common distribution.
 
 ![comparison](./images/exe1/comparison.png)
 
-#### Άσκηση 3
-Εδώ θέλουμε να δούμε πότε ο εβδομαδιαίος δείκτης θετικότητας της Ελλάδας είναι στατιστικά  σημαντικά διαφορετικός  από αυτόν της Ευρωπαικής Ένωσης. Τα αποτελέσματα του ερωτήματος δίνονται στο παρακάτω διάγραμμα, όπου έχουν σημειωθεί και τα επιτρεπτά όρια απόκλισης μεταξύ των δύο τιμών, τα οποία είναι τα 95% διαστήματα εμπιστοσύνης κατά bootstrap:
+#### Exercise 3
+Here, we want to determine when the weekly positivity index of Greece is statistically significantly different from that of the European Union. The results of the question are given in the following diagram, where the permissible deviation limits between the two values are also marked, which are the 95% bootstrap confidence intervals:
 
 ![positivity rates](./images/exe3/greece_europe_rates.png)
 
-Παρατηρούμε πως ο δείκτης θετικότητας δε μπορεί να θεωρηθεί ίδιος σε όλες τις περιπτώσεις, όπως πχ στις εβδομάδες 37 και 38.
+We observe that the positivity rate cannot be considered the same in all cases, such as in weeks 37 and 38.
 
-
-#### Άσκηση 4
-Τώρα συγκρίνουμε τη συμπεριφορά του δείκτη θετικότητας για κάποιες χώρες, για συγκεκριμένες βδομάδες των 2020 και 2021 για να δούμε αν είναι παρόμοια. Στα παρακάτω διαγράμματα των αποτελεσμάτων βλέπουμε με τη διάφορα των μέσων τιμών αν ισχύει αυτό (θέλουμε μέση τιμή κοντά στο 0). Ακολουθούν διαγράμματα για τις χώρες Ουγγαρία, Ισλανδία, Ιρλανδία, Ιταλία και Λιθουανία:
+#### Exercise 4
+Now we compare the behavior of the positivity rate for certain countries, for specific weeks of 2020 and 2021, to see if they are similar. In the following diagrams of the results, we observe the difference in the mean values to determine if this is true (we are looking for a mean value close to 0). The diagrams for the countries Hungary, Iceland, Ireland, Italy, and Lithuania follow:
 
 ![positivity rates Hungary](./images/exe4/hungary.png)
 
@@ -36,11 +36,11 @@
 
 ![positivity rates Lithuania](./images/exe4/lithuania.png)
 
-Ακόμη και για αυτό το μικρό δείγμα χωρών η συμπεριφορά είναι χαοτική. Χώρες όπως η Ιρλανδία έχουν εμφανώς μεγαλύτερο δείκτη θετικότητας για το έτος 2021, εν αντιθέσει με χώρες σαν την Ιταλία που ισχύει το αντίθετο. Βέβαια υπάρχουν και χώρες, όπως για παράδειγμα η Ουγγαρία, όπου η συμπεριφορά μπορεί να θεωρηθεί παρόμοια ανάμεσα στα δύο έτη που μελετάμε.
+Even for this small sample of countries, the behavior is chaotic. Countries like Ireland have a noticeably higher positivity rate for the year 2021, in contrast to countries like Italy where the opposite is true. However, there are countries, such as Hungary, where the behavior can be considered similar between the two years we are studying.
 
-#### Άσκηση 5
-Ζητούμενο σε αυτό το ερώτημα είναι η εύρεση της συσχέτισης των δεικτών θετικότητας μεταξύ της Ελλάδας και των χωρών από το προηγούμενο ερώτημα. Πραγματοποιείται ο υπολογισμός του δείκτη συσχέτισης pearson και έλεγχος σημαντικότητας του συντελεστή αυτού, τόσο παραμετρικά όσο και τυχαιοποιημένα.
-Τα αποτελέσματα που προκύπτουν είναι τα εξής:
+#### Exercise 5
+The objective of this question is to find the correlation of the positivity rates between Greece and the countries from the previous question. The calculation of the Pearson correlation coefficient is performed, and the significance of this coefficient is checked, both parametrically and randomly.
+The results are as follows:
 
 #### Correlation factors between Greece and foreign countries ( Parametric )
 The pearson correlation between Greece and Ireland is rho = 0.65.  
@@ -126,18 +126,16 @@ The p-value is 0.00000
 ![Positivity Rate Comparison](./images/github5.png)
 
 
-#### Άσκηση 6
-Σε αυτό το ερώτημα επιθυμούμε να ελέγξουμε εάν, για τις δύο χώρες όπου ο δείκτης θετικότητας συσχετίζεται περισσότερο με αυτόν της Ελλάδας, η διαφορά των αντίστοιχων συντελεστών είναι στατιστικά σημαντική.  
-Έπειτα από χρήση της τεχνικής bootstrap για να εξάγουμε το rank καταλήγουμε στο κάτωθι συμπέρασμα:  
+#### Exercise 6
+In this question, we aim to check if, for the two countries where the positivity rate correlates more with that of Greece, the difference in the corresponding coefficients is statistically significant.
+After using the bootstrap technique to extract the rank, we arrive at the following conclusion:
 
 The rank of the original difference of correlation factors between Greece and the other two countries (Hungary, Lithuania) is included in the acceptance area.
 So we cannot reject the null Hypothesis, at a significance level of a=0.05. In that case we can say that there is no significant difference between the two correlation factors.
 
 
 
-#### Άσκηση 7
-
-
+#### Exercise 7
 The most effective models for the two samples
 
 Sample 1: The best model is to take a delay of 0 weeks.
@@ -148,10 +146,13 @@ The R-square statistic to this choice is R^2 = 0.90469
 
 
 
-#### Στοιχεία φοιτητών:
+#### Contributors:
 1.  Κωνσταντίνος Γερογιάννης  
-email: kostas.gerogiannis04@gmail.com  
-github: [kostaGRG](https://github.com/kostaGRG)
+   email: kostas.gerogiannis04@gmail.com  
+   github: [kostaGRG](https://github.com/kostaGRG)
 
-2. Σταύρος Τσιμπούκης  
-   email: tsimpous@ece.auth.gr
+2. Σταύρος Τσιμπούκης
+   email: statsimp@gmail.com
+   github: 
+   
+   
