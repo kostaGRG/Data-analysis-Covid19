@@ -151,8 +151,8 @@ The R-square statistic to this choice is R^2 = 0.90469
    email: kostas.gerogiannis04@gmail.com  
    github: [kostaGRG](https://github.com/kostaGRG)
 
-2. Σταύρος Τσιμπούκης
-   email: statsimp@gmail.com
-   github: 
+2. Σταύρος Τσιμπούκης  
+   email: statsimp@gmail.com  
+   github: [statsimp](https://github.com/statsimp)
    
    
